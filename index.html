@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stillwater Partners — Buying founder-owned industrial businesses in Southern California</title>
+<meta name="description" content="Stillwater Partners buys founder-owned industrial and B2B businesses in Southern California — one at a time, to hold, with the people who built them still running them.">
+<meta property="og:title" content="Stillwater Partners">
+<meta property="og:description" content="Founder-owned industrial and B2B businesses in Southern California — bought one at a time, to hold, with the people who built them still running them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stillwater-partners.com/">
+<link rel="canonical" href="https://stillwater-partners.com/">
+<meta property="og:image" content="https://stillwater-partners.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16262b;
+    --ink-soft:#3f5257;
+    --ink-mute:#6c7d80;
+    --paper:#f8f6f1;
+    --paper-2:#f1eee7;
+    --card:#fffefb;
+    --rule:#ddd6c9;
+    --accent:#3d6b63;
+    --accent-soft:#e6ede9;
+    --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --wrap:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  .narrow{max-width:730px;margin-left:auto;margin-right:auto}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:0}
+  h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.08;letter-spacing:-.02em}
+  h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:.6em}
+  h3{font-size:1.12rem;line-height:1.35}
+  p{margin:0 0 1.15em}
+  a{color:var(--accent)}
+
+  .eyebrow{
+    font-family:var(--sans);font-size:.735rem;font-weight:600;
+    letter-spacing:.13em;text-transform:uppercase;color:var(--ink-mute);
+    margin:0 0 1.4rem;
+  }
+  .lede{font-size:clamp(1.08rem,2vw,1.28rem);line-height:1.6;color:var(--ink-soft)}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(248,246,241,.93);
+    backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--rule);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0}
+  .mark{font-family:var(--serif);font-size:1.13rem;font-weight:600;letter-spacing:.005em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .mark span{color:var(--accent)}
+  nav{display:flex;gap:26px;align-items:center}
+  nav a{
+    font-size:.87rem;font-weight:500;color:var(--ink-soft);text-decoration:none;
+    padding-bottom:2px;border-bottom:1px solid transparent;
+  }
+  nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+  @media(max-width:820px){nav{display:none}}
+
+  /* hero */
+  .hero{padding:clamp(64px,10vw,120px) 0 clamp(48px,7vw,80px)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:end}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:26px;align-items:start}}
+  .hero h1{max-width:14ch}
+  .hero .lede{max-width:46ch;margin:0}
+  .hero-sub{padding-bottom:.4rem}
+  .hero-meta{
+    margin-top:2.6rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+    display:flex;flex-wrap:wrap;gap:8px 34px;
+    font-size:.87rem;color:var(--ink-mute);
+  }
+  .hero-meta b{color:var(--ink);font-weight:600}
+
+  section{padding:clamp(52px,7vw,84px) 0;border-top:1px solid var(--rule)}
+  section.tint{background:var(--paper-2)}
+
+  /* the honesty block */
+  .standing{
+    background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);
+    padding:clamp(28px,4.5vw,46px);
+  }
+  .standing h2{margin-bottom:.5em}
+  .standing .lede{margin-bottom:1.6rem}
+  .facts{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .facts li{display:flex;gap:14px;align-items:flex-start;font-size:.98rem;line-height:1.55}
+  .facts .k{
+    flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--accent);
+    margin-top:.55em;
+  }
+  .facts .no{background:#b9702f}
+
+  /* two-col */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px)}
+  @media(max-width:760px){.cols{grid-template-columns:1fr;gap:34px}}
+  .col h3{margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--rule)}
+  .col ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+  .col li{font-size:.97rem;line-height:1.5;padding-left:20px;position:relative;color:var(--ink-soft)}
+  .col li::before{
+    content:"";position:absolute;left:0;top:.62em;width:9px;height:1.5px;background:var(--accent);
+  }
+
+  /* buy box */
+  .box{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2rem;
+  }
+  .box div{background:var(--card);padding:22px 24px}
+  @media(max-width:900px){.box{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.box{grid-template-columns:1fr}}
+  .box dt{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:.45rem}
+  .box dd{margin:0;font-family:var(--serif);font-size:1.16rem;line-height:1.3}
+  .box small{display:block;margin-top:.4rem;font-family:var(--sans);font-size:.85rem;color:var(--ink-mute);line-height:1.45}
+
+  /* steps */
+  .steps{counter-reset:s;display:grid;gap:2px;margin-top:2rem;background:var(--rule);border:1px solid var(--rule)}
+  .steps li{
+    counter-increment:s;background:var(--card);padding:20px 24px 20px 62px;position:relative;
+    font-size:.97rem;line-height:1.55;color:var(--ink-soft);
+  }
+  .steps li::before{
+    content:counter(s);position:absolute;left:24px;top:20px;
+    font-family:var(--serif);font-size:1.05rem;color:var(--accent);font-weight:600;
+  }
+  .steps b{color:var(--ink);font-weight:600;display:block;font-family:var(--sans);font-size:.97rem;margin-bottom:.15rem}
+  ol.steps{list-style:none;padding-left:0;margin-left:0}
+
+  /* bio */
+  .bio{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+  @media(max-width:820px){.bio{grid-template-columns:1fr;gap:32px}}
+  .credentials{background:var(--card);border:1px solid var(--rule);padding:26px 28px}
+  .credentials h3{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:1.1rem}
+  .credentials ul{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+  .credentials li{font-size:.94rem;line-height:1.5;color:var(--ink-soft)}
+  .credentials b{display:block;font-family:var(--serif);font-size:1.3rem;color:var(--ink);font-weight:600;line-height:1.2}
+  .note{font-size:.86rem;color:var(--ink-mute);border-top:1px solid var(--rule);margin-top:1.4rem;padding-top:1.1rem;line-height:1.5}
+
+  /* audience cards */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px);margin-top:2rem}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--rule);padding:28px 30px}
+  .card h3{margin-bottom:.75rem}
+  .card p{font-size:.95rem;color:var(--ink-soft);margin-bottom:.9em}
+  .card p:last-child{margin-bottom:0}
+
+  /* contact */
+  .contact{background:var(--ink);color:var(--paper);border-top:none}
+  .contact h2{color:var(--paper)}
+  .contact .lede{color:#b9c6c7}
+  .contact a{color:#9ec7bd}
+  .cta{
+    display:inline-block;margin-top:.6rem;background:var(--accent);color:#fff;text-decoration:none;
+    font-weight:600;font-size:.95rem;padding:14px 30px;border:1px solid var(--accent);
+  }
+  .cta:hover{background:#33594f;border-color:#33594f;color:#fff}
+  .cta.ghost{background:transparent;color:var(--paper);border-color:#4d6469;margin-left:12px}
+  .cta.ghost:hover{background:#22383d;color:#fff;border-color:#6b8288}
+  @media(max-width:560px){.cta.ghost{margin-left:0;margin-top:12px}.cta{display:block;text-align:center}}
+  .contact-lines{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid #2e474c;font-size:.93rem;color:#9fb0b2;display:grid;gap:6px}
+  .contact-lines b{color:var(--paper);font-weight:500}
+
+  footer{background:var(--ink);color:#7e9295;font-size:.82rem;padding:0 0 44px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;padding-top:22px;border-top:1px solid #2e474c}
+
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top">Stillwater <span>Partners</span></a>
+    <nav>
+      <a href="#owners">For owners</a>
+      <a href="#buy">What I buy</a>
+      <a href="#who">Who I am</a>
+      <a href="#advisors">Intermediaries</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Irvine, California</p>
+      <div class="hero-grid">
+        <h1>Who buys your company matters more than what they pay for it.</h1>
+        <div class="hero-sub">
+          <p class="lede">Stillwater Partners buys founder-owned industrial and B2B businesses in Southern California. One at a time. To hold — with the people who built them still running them.</p>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span><b>$3M+</b> EBITDA</span>
+        <span><b>Manufacturing</b>, distribution, industrial services</span>
+        <span><b>One acquisition</b> a year, by design</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE HONEST STANDING -->
+  <section>
+    <div class="wrap">
+      <div class="standing narrow">
+        <p class="eyebrow" style="margin-bottom:1rem">Where things actually stand</p>
+        <h2>Stillwater is new. I&nbsp;am not.</h2>
+        <p class="lede">Most buyers make you dig for this. Here it is first.</p>
+        <ul class="facts">
+          <li><span class="k"></span><span><b>Stillwater has not closed an acquisition yet.</b> This is the vehicle I built to buy and hold companies on my own account, and the first one is ahead of me, not behind me.</span></li>
+          <li><span class="k"></span><span><b>I have closed seven.</b> Sourced, structured, negotiated, financed and integrated — for private-equity-backed industrial and essential-services platforms, over the last five years.</span></li>
+          <li><span class="k no"></span><span><b>There is no fund and no blind pool.</b> I am not going to tell you I have committed capital sitting in an account. Each acquisition is financed on its own — details below, in plain language.</span></li>
+          <li><span class="k"></span><span><b>You will always know exactly who you are dealing with.</b> One principal, named, on the phone. Not an associate, not a platform, not a number in a portfolio.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR OWNERS -->
+  <section id="owners" class="tint">
+    <div class="wrap">
+      <div class="narrow">
+        <p class="eyebrow">For owners</p>
+        <h2>Selling the thing you built is not a transaction.</h2>
+        <p class="lede">It is the last decision you make about a company you have spent decades on — and most of what you are weighing has nothing to do with the number.</p>
+        <p>Whether your people keep their jobs. Whether the name over the door survives. Whether the customers you hand-shook with get treated the same way. Whether the buyer disappears three years later and sells you to someone worse.</p>
+        <p>Those are the right questions, and you should make any buyer answer them before you are in diligence. Here are my answers, in advance.</p>
+      </div>
+
+      <div class="cols" style="margin-top:3rem">
+        <div class="col">
+          <h3>What does not change</h3>
+          <ul>
+            <li>Your company keeps its name, its brand and its identity.</li>
+            <li>Your team stays. I am buying the business because of how it runs, not in spite of it.</li>
+            <li>Your location stays. I am not consolidating operations into somewhere cheaper.</li>
+            <li>Your leadership keeps operating the company. I am not moving in to run it, and I will not pretend I can do your job better than you did.</li>
+            <li>Your customers and suppliers keep the same people on the other end of the phone.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>What I commit to</h3>
+          <ul>
+            <li>No fund clock. There is no pre-set date by which I am forced to sell you to someone else.</li>
+            <li>No integration playbook. Nothing gets merged into a larger entity or run off a corporate template.</li>
+            <li>No headcount reduction as a value-creation plan. If that is the thesis, I am the wrong buyer.</li>
+            <li>The price we agree to is the price I work toward. Diligence confirms what you told me — it is not a second negotiation.</li>
+            <li>You will know how the deal is financed and who is behind it before you sign anything.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUY -->
+  <section id="buy">
+    <div class="wrap">
+      <div class="narrow">
+        <p class="eyebrow">What I buy</p>
+        <h2>A narrow box, held honestly.</h2>
+        <p class="lede">I would rather tell you no than string you along. If a business is outside this, you will hear it on the first call.</p>
+      </div>
+
+      <dl class="box">
+        <div><dt>Earnings</dt><dd>$3M+ EBITDA<small>Real, owner-adjusted, today — not projected. Below that I am not the right buyer.</small></dd></div>
+        <div><dt>Sectors</dt><dd>Industrial &amp; B2B<small>Niche and precision manufacturing, mission-critical distribution, industrial and B2B services.</small></dd></div>
+        <div><dt>Geography</dt><dd>Southern California first<small>Orange County, LA and San Diego, then outward where the business warrants it.</small></dd></div>
+        <div><dt>Situation</dt><dd>Founder-owned<small>Succession, retirement, or an owner who wants out of the day-to-day but not out of the story.</small></dd></div>
+        <div><dt>Also</dt><dd>Multi-site platforms<small>Fragmented, multi-location businesses with three or more locations and a model that repeats.</small></dd></div>
+        <div><dt>Not for us</dt><dd>Turnarounds<small>I do not buy broken companies to fix them, and I do not buy anything in tire or automotive services.</small></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section id="who" class="tint">
+    <div class="wrap">
+      <p class="eyebrow">Who I am</p>
+      <div class="bio">
+        <div>
+          <h2>Kenneth Pettibone</h2>
+          <p class="lede" style="margin-bottom:1.4rem">Principal</p>
+          <p>I have spent the last five years on the buy side — sourcing, modeling, negotiating, financing and integrating acquisitions of industrial and essential-services companies for private-equity-backed platforms. Seven of those deals closed. I have read more than a thousand confidential memoranda and put roughly thirty letters of intent in front of owners, which mostly taught me how often a good company gets sold to the wrong buyer.</p>
+          <p>Stillwater is the answer to that. It exists to buy a small number of very good businesses and keep them — no fund, no clock, no obligation to flip a company because a fund's life ran out.</p>
+          <p>I have also owned and run sheet metal and welding shops. That is where I learned what it looks like when the person with the answers is not in the building — and it is exactly why I have no intention of being that person for you. The people running your company will keep running it. My job is capital, structure, and staying out of the way of what already works.</p>
+          <p>My family has been in Orange County since 1962. I am not moving your business, and I am not going anywhere.</p>
+        </div>
+        <aside class="credentials">
+          <h3>Track record — mine, not Stillwater's</h3>
+          <ul>
+            <li><b>7</b> acquisitions closed for private-equity-backed platforms</li>
+            <li><b>$50M+</b> in transaction value advanced through investment committee</li>
+            <li><b>1,000+</b> confidential memoranda evaluated; ~30 LOIs submitted</li>
+            <li><b>$18M+</b> of acquisition capital structured across senior debt, mezzanine and equity</li>
+          </ul>
+          <p class="note">These are deals I led in my career for prior employers. They are not Stillwater transactions, and I will never present them as such.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPITAL -->
+  <section id="capital">
+    <div class="wrap narrow">
+      <p class="eyebrow">How the money works</p>
+      <h2>No fund. No blind pool. Said plainly.</h2>
+      <p>A lot of buyers imply committed capital they do not have. I am not going to do that, because you will find out eventually and it should be at the beginning.</p>
+      <p>Stillwater capitalizes each acquisition on its own — equity raised for that specific company alongside senior and, where it fits, mezzanine debt. It is a deliberately conservative structure: less leverage, so the business is run calmly rather than against a covenant.</p>
+      <p>That approach is slower than a fund. It is also why there is no deployment pressure, no committee forcing a bid, and no pre-set date when someone else decides your company gets sold.</p>
+      <p><b>What I owe you:</b> before you sign a letter of intent, you will know how the transaction is financed, who the capital is coming from, and what has to be true for it to close. If I cannot answer that to your satisfaction, you should not sign it.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="tint">
+    <div class="wrap narrow">
+      <p class="eyebrow">How this goes</p>
+      <h2>Four steps, and you can stop at any one of them.</h2>
+      <ol class="steps">
+        <li><b>A conversation, under NDA if you want one first.</b> No financials required. I want to understand the business, what you want to happen to it, and whether I am even the right kind of buyer.</li>
+        <li><b>You send financials. I read them myself.</b> You get a straight answer: a valuation range and how I got there, or a no with the reason. Not a maybe.</li>
+        <li><b>A letter of intent that reflects the conversation we actually had.</b> Structure, terms, your role afterward, what happens to your team — written down before anyone spends money on lawyers.</li>
+        <li><b>Diligence to confirm, then close.</b> I confirm what you told me. I do not re-trade a price because I found something I could have asked about earlier.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- OTHER AUDIENCES -->
+  <section id="advisors">
+    <div class="wrap">
+      <p class="eyebrow">Working together</p>
+      <h2>Intermediaries, operators and advisors.</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>For brokers and bankers</h3>
+          <p>Every teaser is read by the principal — the same person who will be on the call, at the closing table, and answering the phone two years later. You get a real answer either way, not silence.</p>
+          <p>The box is above and it is real: $3M+ of current EBITDA, industrial and B2B, founder-owned, Southern California first. Nothing in tire or automotive services, ever.</p>
+          <p><a href="#contact">Send a teaser →</a></p>
+        </div>
+        <div class="card">
+          <h3>For operators and advisors</h3>
+          <p>I am building a bench of people to think with — operators who have run something, industry hands who know a market cold, and finance people whose judgment is worth a phone call on a Sunday.</p>
+          <p>If you have run a business and would consider leading or chairing one again, or you simply like looking at deals, I would rather know you before there is a deal on the table.</p>
+          <p><a href="#contact">Start a conversation →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap narrow">
+      <p class="eyebrow" style="color:#8ba3a2">Contact</p>
+      <h2>If you are even thinking about it, start with a conversation.</h2>
+      <p class="lede">There is no pitch and no obligation. Plenty of these conversations end with “not yet” — that is a perfectly good outcome, and I will still be here when the timing changes.</p>
+      <p>
+        <a class="cta" href="mailto:kenneth@stillwater-partners.com">Email Kenneth directly</a>
+        <!-- SCHEDULING: restore this button once the Reclaim link is confirmed
+        <a class="cta ghost" href="SCHEDULING_LINK_HERE">Find a time</a> -->
+      </p>
+      <div class="contact-lines">
+        <span><b>Kenneth Pettibone</b> · Principal</span>
+        <span><a href="mailto:kenneth@stillwater-partners.com">kenneth@stillwater-partners.com</a></span>
+        <span>200 Spectrum Center Drive, Suite 300, Irvine, CA 92618</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Stillwater Partners</span>
+    <span>Southern California</span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
